@@ -1,0 +1,19 @@
+<br><br><br><br><br><br>
+<center>
+  <form action="/customer/add" method="post">
+    <h1 class="text text-primary text-uppercase">Add new student</h1>
+    <label for="">Name</label><br>
+    <input class="form-control"type="text" style="text-align: center;" name="name" required="required"><br><br>
+    <label for="">Age</label><br>
+    <input class="form-control" type="number" name="age" min="10" max="99" required="required"><br><br>
+    <label for="">Gender</label><br> 
+    <select id="gender" name="gender" required="required">
+      <option value="nam" selected="select">Nam</option>
+      <option value="nữ" >Nữ</option>
+    </select>
+    <br><br>
+    <label for="">Image</label><br>
+    <input class="form-control" type="url" name="image" required="required"><br><br>
+    <input type="submit" style="color: white;background-color: green;width: 100px;"  value="Add">
+  </form>
+</center>

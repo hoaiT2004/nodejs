@@ -1,0 +1,16 @@
+<br><br><br><br><br><br>
+<center>
+<form action="/toy/edit/{{toy._id}}" method="post">
+   <h1>Edit Toy</h1>
+   <label for="">Toy Name</label><br>
+    <input class="form-control"type="text" name="name"  style="text-align: center;" required="required" value="{{toy.name}}"><br><br>
+    <label for="">Toy Count</label><br>
+    <input class="form-control" type="number" name="count"  style="text-align: center;" min="0" max="200" required="required" value="{{toy.count}}"><br><br>
+    <label for="">Toy Price</label><br>
+    <input class="form-control" type="number" name="price"  style="text-align: center;" min="10" max="1000" required="required" value="{{toy.price}}"><br><br>
+    <label for="">Toy Image</label><br>
+    <input class="form-control" type="url" name="image"  style="text-align: center;" required="required" value="{{toy.image}}"><br><br>
+   
+   <input type="submit" style="color: white;background-color: green;width: 100px;"  value="Edit">
+</form>
+</center>

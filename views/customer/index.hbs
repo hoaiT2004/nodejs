@@ -1,0 +1,57 @@
+<br><br><br><br><br><br>
+<center>
+   <a class="btn btn-primary mb-3" href="/customer/add">Add new customer</a>
+   <a class="btn btn-success" href="/customer/deleteall"
+      onclick="return confirm('Are you sure to delete all customers ?');">Delete all customers</a>
+</center>
+   <center>
+      <a class="btn btn-info" href="/customer/sortid/asc">
+         ID Ascending
+      </a>
+      <a class="btn btn-warning" href="/customer/sortid/desc">
+         ID Descending
+      </a>
+      <a class="btn btn-danger" href="/customer/male">
+         Nam
+      </a>
+      <a class="btn btn-primary" href="/customer/female">
+         Nữ
+      </a>
+   </center>
+   <br>
+   <center>
+      <form action="/customer/search" method="post">
+         <input class="form-control" type="search" name="keyword" id="" required placeholder="Search by name">
+      </form>
+   </center>
+   <br>
+
+<table class="table table-info">
+   <tr>
+      <th style="color: rgb(128,128,128); width: 150px;"></th>
+      <th style="color: rgb(128,128,128); width: 200px;">customer ID</th>
+      <th style="color: rgb(128,128,128); width: 100px;">Name</th>
+      <th style="color: rgb(128,128,128); width: 100px;">Age</th>
+      <th style="color: rgb(128,128,128); width: 100px;">Gender</th>
+      <th style="color: rgb(128,128,128); width: 200px;">Image</th>
+      <th style="color: rgb(128,128,128); width: 300px;">Menu</th>
+   </tr>
+   {{#each customerList }}
+   <tr>
+      <td style="color: rgb(128,128,128); width: 150px;text-align: center;"></td>
+      <td style="color: rgb(128,128,128); width: 200px;text-align: center;">{{ _id }}</td>
+      <td style="color: rgb(128,128,128); width: 100px;text-align: center;">{{ name }}</td>
+      <td style="color: rgb(128,128,128); width: 100px;text-align: center;">{{ age }}</td>
+      <td style="color: rgb(128,128,128); width: 100px;text-align: center;">{{ gender }}</td>
+      <td style="color: rgb(128,128,128); width: 200px;text-align: center;">
+            <img src="{{ image }}" width="100" height="100">
+      </td>
+      <td style="color: rgb(128,128,128); width: 300px;text-align: center;">
+         <a class="btn btn-warning" href="/customer/edit/{{ _id }}">Edit</a>
+         <a class="btn btn-danger" href="/customer/delete/{{ _id }}"
+            onclick="return confirm('Are you sure to delete this customer ?');">Delete</a>
+      </td>
+   </tr>
+   {{/each}}
+
+</table>

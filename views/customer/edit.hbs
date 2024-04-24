@@ -1,0 +1,24 @@
+<br><br><br><br><br><br>
+<center>
+<form action="/customer/edit/{{customer._id}}" method="post">
+   <h1>Edit customer</h1>
+   <label for="">customer name</label><br>
+   <input type="text" name="name" style="text-align: center;"
+   value="{{ customer.name }}" required="required"><br><br>
+   <label for="">customer age</label><br>
+   <input type="number" name="age" style="text-align: center;"
+   value="{{ customer.age }}" required="required"
+   ><br><br>
+   <label for="">customer gender</label><br>
+    <select id="gender" name="gender" required="required" > 
+      <option value="nam">Nam</option>
+      <option value="nữ">Nữ</option>
+    </select>
+   <br><br>
+   <label for="">customer Image</label><br>
+   <input type="url" name="image"  style="text-align: center;"
+   value="{{ customer.image }}" required="required"
+   ><br><br>
+   <input type="submit" style="color: white;background-color: green;width: 100px;"  value="Edit">
+</form>
+</center>
